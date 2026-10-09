@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#f8e8e8">
+<title>For Zainab Fatima ♡</title>
+<style>
+  :root { --pink:#f4c9d2; --rose:#d66d8b; --cream:#fffaf3; --ink:#553b43; --lilac:#e4d8f2; }
+  * { box-sizing:border-box; }
+  body {
+    margin:0; min-height:100vh; color:var(--ink);
+    font-family: Georgia, "Times New Roman", serif;
+    background: radial-gradient(circle at top left,#fff7f0 0,#f9e5e9 45%,#eee3f7 100%);
+    overflow-x:hidden;
+  }
+  .sparkles { position:fixed; inset:0; pointer-events:none; overflow:hidden; z-index:0; }
+  .sparkle { position:absolute; bottom:-40px; opacity:.65; animation:floatUp linear infinite; }
+  @keyframes floatUp { from { transform:translateY(0) rotate(0); opacity:0 } 12% {opacity:.7} to { transform:translateY(-115vh) rotate(35deg); opacity:0 } }
+  main { position:relative; z-index:1; width:min(920px, 100%); margin:auto; padding:28px 16px 46px; }
+  .topline { text-align:center; letter-spacing:.12em; text-transform:uppercase; font: 12px/1.5 Arial,sans-serif; color:#a05d72; }
+  h1 { text-align:center; font-size:clamp(2.5rem,9vw,5rem); font-weight:normal; line-height:1.05; margin:12px 0 8px; color:#8d3e5b; }
+  .subtitle { text-align:center; font-style:italic; margin:0 auto 24px; max-width:550px; line-height:1.6; }
+  .envelope-wrap { display:flex; justify-content:center; margin:25px 0 18px; }
+  .envelope {
+    position:relative; width:min(340px,88vw); height:205px; border:0; cursor:pointer;
+    background:linear-gradient(145deg,#efb8c6,#d987a0); border-radius:8px 8px 14px 14px;
+    box-shadow:0 14px 32px #8d3e5b25; color:white; font-size:1.05rem;
+    transition:transform .25s ease;
+  }
+  .envelope:hover { transform:translateY(-4px); }
+  .envelope:before { content:""; position:absolute; inset:0; background:linear-gradient(33deg,transparent 49%,#f8d6de 50%) left/50% 100% no-repeat,linear-gradient(-33deg,transparent 49%,#f8d6de 50%) right/50% 100% no-repeat; opacity:.95; border-radius:8px 8px 14px 14px; }
+  .envelope:after { content:""; position:absolute; top:0; left:0; right:0; margin:auto; width:0;height:0;border-left:calc(min(340px,88vw)/2) solid transparent;border-right:calc(min(340px,88vw)/2) solid transparent;border-top:118px solid #f3c5d1; }
+  .seal { position:absolute; z-index:2; left:50%; top:53%; transform:translate(-50%,-50%); width:56px;height:56px;border-radius:50%;background:#b64d70;display:grid;place-items:center;font-size:28px;box-shadow:0 3px 9px #7a2c4828; }
+  .env-label { position:absolute; z-index:3; left:0;right:0; bottom:15px; color:#71354c; font:13px Arial,sans-serif; letter-spacing:.04em; }
+  .hint { text-align:center; font:13px Arial,sans-serif; color:#98677a; margin-bottom:28px; }
+  .letter { display:none; background:rgba(255,250,243,.94); border:1px solid #edcbd3; border-radius:18px; padding:clamp(20px,5vw,42px); box-shadow:0 18px 50px #8d3e5b18; }
+  .letter.show { display:block; animation:appear .7s ease both; }
+  @keyframes appear { from {opacity:0;transform:translateY(14px)} to {opacity:1;transform:translateY(0)} }
+  .letter h2 { font-size:clamp(2rem,7vw,3.5rem); text-align:center; color:#a33e64; margin:0 0 8px; font-weight:normal; }
+  .dedication { text-align:center; font-style:italic; margin:0 0 26px; line-height:1.7; }
+  .bodycopy { font-size:1.07rem; line-height:1.85; }
+  .nickname-title { text-align:center; font-size:1.55rem; color:#9c4968; margin:32px 0 14px; font-weight:normal; }
+  .nicknames { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; }
+  .nick { padding:14px 15px; border-radius:13px; background:#fff0f2; border:1px solid #f0d4dc; }
+  .nick:nth-child(3n+2) { background:#f3effb; border-color:#e6dcf3; }
+  .nick:nth-child(3n) { background:#f3f5e9; border-color:#e1e7cf; }
+  .nick strong { display:block; font-size:1.15rem; color:#91415e; margin-bottom:6px; }
+  .nick span { font-size:.97rem; line-height:1.5; }
+  .promise { margin:28px 0 8px; padding:19px; border-radius:14px; background:#f8e5eb; text-align:center; font-style:italic; line-height:1.8; }
+  .forgive-area { text-align:center; margin-top:28px; }
+  .forgive-area p { line-height:1.6; }
+  .btn { border:0; border-radius:999px; padding:13px 22px; font-size:1rem; cursor:pointer; margin:6px; transition:transform .18s,box-shadow .18s; }
+  .btn:hover { transform:translateY(-2px); box-shadow:0 7px 18px #9d4d6825; }
+  .primary { color:white; background:#b84e73; }
+  .secondary { color:#91415e; background:#f4dce4; }
+  #response { min-height:30px; color:#a33e64; font-style:italic; font-size:1.15rem; }
+  .signoff { text-align:right; margin-top:30px; line-height:1.8; font-style:italic; }
+  .footer { text-align:center; font:12px Arial,sans-serif; opacity:.7; margin-top:25px; }
+  .heart-pop { position:fixed; z-index:9; pointer-events:none; animation:pop 1.7s ease-out forwards; font-size:24px; }
+  @keyframes pop { 0%{transform:translateY(0) scale(.5);opacity:0} 20%{opacity:1} 100%{transform:translateY(-180px) translateX(var(--drift)) scale(1.4);opacity:0} }
+  @media(max-width:540px) { .nicknames {grid-template-columns:1fr;} main{padding:22px 12px 36px;} .bodycopy{font-size:1rem;} }
+  @media(prefers-reduced-motion:reduce) { *,*:before,*:after {animation-duration:.01ms!important;transition-duration:.01ms!important;} }
+</style>
+</head>
+<body>
+<div class="sparkles" id="sparkles" aria-hidden="true"></div>
+<main>
+  <p class="topline">a little letter from the heart</p>
+  <h1>I'm Sorry ♡</h1>
+  <p class="subtitle">For my favourite person, my peace, and the girl I never want to hurt.</p>
+
+  <div class="envelope-wrap">
+    <button class="envelope" id="openLetter" aria-label="Open your love letter">
+      <span class="seal">♡</span>
+      <span class="env-label">A letter just for you · tap to open</span>
+    </button>
+  </div>
+  <p class="hint">Psst… there's something I want you to know. 💌</p>
+
+  <article class="letter" id="letter">
+    <h2>I'm truly sorry, Zainab ♡</h2>
+    <p class="dedication">To my dear Zainab Fatima,<br>my favourite person in this whole world.</p>
+
+    <div class="bodycopy">
+      <p>I know I hurt you, and I'm genuinely sorry. You mean the world to me, and the last thing I ever want is to be the reason behind your tears. I can't change what happened, but I can take responsibility, listen to you better, and show you through my actions how much you matter to me.</p>
+      <p>I'm sorry for my words, my actions, my overthinking, and the moments when I didn't understand your heart the way I should have. You deserve gentleness, respect, honesty, laughter, and a love that makes you feel safe. I don't expect one letter to fix everything—I just hope it can be the start of making things right.</p>
+    </div>
+
+    <h3 class="nickname-title">Every name has a little piece of my heart ♡</h3>
+    <div class="nicknames">
+      <div class="nick"><strong>Daughter ♡</strong><span>You're my precious little blessing, and your happiness matters to me more than you know.</span></div>
+      <div class="nick"><strong>Princess ♡</strong><span>You deserve to be cherished, respected, and loved like the royalty you are.</span></div>
+      <div class="nick"><strong>Barbieee ♡</strong><span>My pretty girl, my favourite smile, and the cutest chaos in my world.</span></div>
+      <div class="nick"><strong>Chuzii ♡</strong><span>My little troublemaker and one of my biggest reasons to smile.</span></div>
+      <div class="nick"><strong>Sarkar ♡</strong><span>You rule my heart—even when I'm being too stubborn to say it properly.</span></div>
+      <div class="nick"><strong>Madam ji ♡</strong><span>Strong, beautiful, and independent—you still have the softest place in my heart.</span></div>
+      <div class="nick"><strong>Noor-e-Jahan ♡</strong><span>The light of my world; you make ordinary days feel special.</span></div>
+      <div class="nick"><strong>Wifey ♡</strong><span>Not just my love today, but the person I dream of choosing again and again.</span></div>
+    </div>
+
+    <div class="promise">
+      You are not just my girlfriend; you're my peace, my happiness, and my home. ♡<br>
+      I promise to try harder, communicate better, and love you with more care—not only with words, but with what I do.
+    </div>
+
+    <div class="bodycopy">
+      <p>No matter how upset we are, I never want you to doubt that you are important to me. I love your heart, your laugh, your madness, your softness, and all the little things that make you <em>you</em>.</p>
+      <p>Please forgive me when you're ready. I'll give you the time and space you need, and I'll do my best to earn back your smile. I love you today, tomorrow, and always. ♡</p>
+    </div>
+
+    <div class="forgive-area">
+      <p><strong>Can I try to make things right? 🥺</strong></p>
+      <button class="btn primary" id="forgiveBtn">One more chance? 💗</button>
+      <button class="btn secondary" id="hugBtn">Sending you a hug 🤍</button>
+      <p id="response" aria-live="polite"></p>
+    </div>
+
+    <p class="signoff">With all my love, always,<br><strong>Your Ghade ♡</strong></p>
+  </article>
+  <p class="footer">Made with love, just for Zainab Fatima ♡</p>
+</main>
+<script>
+  const sparkleBox = document.getElementById('sparkles');
+  const symbols = ['♡','♥','✧','✿'];
+  for (let i = 0; i < 18; i++) {
+    const el = document.createElement('span');
+    el.className = 'sparkle';
+    el.textContent = symbols[i % symbols.length];
+    el.style.left = (Math.random() * 100) + '%';
+    el.style.animationDuration = (8 + Math.random() * 10) + 's';
+    el.style.animationDelay = (-Math.random() * 15) + 's';
+    el.style.fontSize = (14 + Math.random() * 18) + 'px';
+    sparkleBox.appendChild(el);
+  }
+
+  document.getElementById('openLetter').addEventListener('click', () => {
+    const letter = document.getElementById('letter');
+    letter.classList.add('show');
+    letter.scrollIntoView({behavior:'smooth', block:'start'});
+    document.getElementById('openLetter').innerHTML = '<span class="seal">♥</span><span class="env-label">Opened with love ♡</span>';
+  });
+
+  function hearts(count=18) {
+    for (let i = 0; i < count; i++) {
+      const h = document.createElement('span');
+      h.className = 'heart-pop';
+      h.textContent = ['💗','♡','💖','💕','✧'][Math.floor(Math.random()*5)];
+      h.style.left = (8 + Math.random()*84) + 'vw';
+      h.style.top = (55 + Math.random()*35) + 'vh';
+      h.style.setProperty('--drift', (Math.random()*140 - 70) + 'px');
+      document.body.appendChild(h);
+      setTimeout(() => h.remove(), 1800);
+    }
+  }
+  document.getElementById('forgiveBtn').addEventListener('click', () => {
+    document.getElementById('response').textContent = 'Thank you for hearing my heart. I’ll show you with my actions, not just my words. ♡';
+    hearts(26);
+  });
+  document.getElementById('hugBtn').addEventListener('click', () => {
+    document.getElementById('response').textContent = 'A big, warm hug for my Noor-e-Jahan. You are loved. 🤍';
+    hearts(18);
+  });
+</script>
+</body>
+</html>
